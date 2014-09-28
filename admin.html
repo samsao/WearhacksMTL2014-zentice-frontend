@@ -1,0 +1,63 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RECOVER</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="lib/themes/default.css" id="theme_base">
+    <link rel="stylesheet" href="lib/themes/default.date.css" id="theme_date">
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="//use.typekit.net/ilm0cgh.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.0.min.js"></script>
+  </head>
+  <body>
+
+    <div class="row">
+      <div class="large-12 large-centered columns title">
+        <h1 class="logo"><img src="img/recover_logo.png" alt="" width="200"></h1>
+        <h2>leverage wearables to improve your recovery</h2>
+      </div>
+    </div>
+  
+
+  
+    <div class="row admin">
+      <div class="large-6 large-centered columns">
+        <h2>Add an excercice</h2>
+        
+       
+        <form id="createDate">
+        <p>1. Select a patient and add a date.</p>
+        <div id="people"></div>
+       <input type="text" name="date" id="input_from" placeholder="Excercice date">
+       </form>
+       <form action="" id="selectExercice">
+       <p>2. Select an exercice and submit.</p>
+         <input type="hidden" id="dateId">
+         <select name="" id="exercice">
+           <option value="0">tourner le poignet</option>
+           <option value="1">lever le bras</option>
+         </select>
+         <input class="button" type="submit">
+       </form>
+      </div>
+    </div>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    <script src="lib/picker.js"></script>
+    <script src="lib/picker.date.js"></script>
+    <script>
+      var url ='icons.svg';
+      var c=new XMLHttpRequest(); c.open('GET', url, false); c.setRequestHeader('Content-Type', 'text/xml'); c.send();
+      document.body.insertBefore(c.responseXML.firstChild, document.body.firstChild)
+    </script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
