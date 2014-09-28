@@ -101,6 +101,8 @@ $('#selectExercice').on('submit',function(e){
     newExercice.set("exerciceDataID", $('select#exercice').val());
     newExercice.save();
     console.log(newExercice);
+    $('.program').slideUp();
+    $('#success').slideDown();
 });
 
 $('#patients').on('click',function(e){
