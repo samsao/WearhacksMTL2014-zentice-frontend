@@ -26,10 +26,16 @@
 
   
     <div class="row admin">
-      <div class="large-6 large-centered columns">
+    <div class="large-4 columns">
+      <ul class='menu'>
+        <li id="program">CREATE PROGRAM</li>
+        <li id="patients">VIEW PATIENTS</li>
+        <li id="settings">SETTINGS</li>
+      </ul>
+    </div>
+      <div class="large-8 columns">
+      <div class="program"> 
         <h2>Add an excercice</h2>
-        
-       
         <form id="createDate">
         <p>1. Select a patient and add a date.</p>
         <div id="people"></div>
@@ -39,13 +45,33 @@
        <p>2. Select an exercice and submit.</p>
          <input type="hidden" id="dateId">
          <select name="" id="exercice">
-           <option value="0">tourner le poignet</option>
-           <option value="1">lever le bras</option>
+           <option value="0">Finger Adduction</option>
+           <option value="1">Thumb Opposition</option>
+           <option value="2">Tennis Ball Squeeze</option>
+           <option value="3">Resistance Band Wrist</option>
+           <option value="4">Make a Fist</option>
+           <option value="5">Finger Stretch</option>
+           <option value="6">Claw Stretch</option>
+           <option value="7">Grip Strengthener</option>
+           <option value="8">Pinch Strengthener</option>
+           <option value="9">Finger Lift</option>
+           <option value="10">Thumb Extension</option>
+           <option value="11">Thumb Flex</option>
+           <option value="12">Thumb Touch</option>
+           <option value="13">Thumb Stretches</option>
          </select>
          <input class="button" type="submit">
        </form>
+       </div>
+
+       <div class="patients hide">
+         <h2>All patients</h2>
+         <div id="peoplelist"></div>
+       </div>
       </div>
     </div>
+
+
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script>

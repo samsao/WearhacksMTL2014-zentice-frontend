@@ -2,6 +2,8 @@
     Parse.initialize("UL1HrX8pATNbmoEfREItjPf9ZVWT5hsc0cSw0Y1T", "UJzUOQasqq6yA2U5ekDEf2xb1r5tyPtikgff3HU6");
 
     var s = $('<select id="user" name="user" />');
+    var l = $('<ul/>');
+
     var Users = Parse.Object.extend("User");
     var query = new Parse.Query(Users);
     var CreateDate = Parse.Object.extend("ExerciceDate");
@@ -15,8 +17,9 @@
             console.log("Total: "+results.length);
 
             $.each(results,function(i,item){
-              // console.log(item);
+              console.log(item);
             $('<option />', {value: item.id, text: item.attributes.name}).appendTo(s);
+            $('<li />', {value: item.id, text: item.attributes.name+' (last login: '+item.updatedAt+')'}).appendTo(l);
             });
         }, error:function(error) {
         alert("Error when getting objects!");
@@ -24,6 +27,8 @@
     });
 
     s.appendTo('#people');
+    l.appendTo('#peoplelist');
+
 
     queryDate.find({
     success:function(results) {
@@ -96,4 +101,14 @@ $('#selectExercice').on('submit',function(e){
     newExercice.set("exerciceDataID", $('select#exercice').val());
     newExercice.save();
     console.log(newExercice);
+});
+
+$('#patients').on('click',function(e){
+    $('.program').slideUp();
+    $('.patients').slideDown();
+});
+
+$('#program').on('click',function(e){
+    $('.program').slideDown();
+    $('.patients').slideUp();
 });

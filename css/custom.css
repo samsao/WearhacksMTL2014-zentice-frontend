@@ -125,3 +125,24 @@ input[type='submit']:hover {
 	color: white;
 	display: inline-block;
 }
+
+.admin ul.menu {
+
+	list-style: none;
+	color:white;
+}
+
+ul.menu li {
+	padding: 10px;
+	border: 1px solid white;
+}
+ul.menu li:hover{
+	color:#9FADF3;
+	background-color: #D3FBFD;
+	cursor:pointer;
+}
+
+#peoplelist ul li {
+	color:white;
+	list-style: none;
+}
