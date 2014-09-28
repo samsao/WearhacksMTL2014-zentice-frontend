@@ -108,6 +108,7 @@ input[type='submit']:hover {
 }
 .screens img {
 	border: 1px solid #D3FBFD;
+	margin-bottom: 20px;
 }
 
 .footer {
